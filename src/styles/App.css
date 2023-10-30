@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cover {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(136, 37, 106);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cover-title {
+  font-family: "Cherry Bomb One";
+  font-size: 100px;
+
+}
+
+.enter-button {
+  background-color: rgb(134, 138, 140);
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  color: white;
+  font-size: 24px;
+  border: 0px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.enter-button:active {
+  border: 3px solid rgb(60, 60, 60);
+
+}
