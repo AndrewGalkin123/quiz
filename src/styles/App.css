@@ -48,3 +48,31 @@
   align-items: center;
   padding: 0 10px;
 }
+
+.header a { 
+  height: 125%;
+}
+
+main { 
+  background-color: rgb(181, 81, 151);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quiz-button { 
+  background-color: rgb(134, 138, 140);
+  width: 100px;
+  height: 30px;
+
+}
+
+.quiz { 
+  width: 90%;
+  display: flex;
+  background-color: rgb(202, 202, 202);
+  margin: 20px;
+  height: 70px;
+  border-radius: 6px;
+}
