@@ -5,8 +5,8 @@ const Quiz = (props) => {
     return(
         <div className="quiz">
             <div className="quiz-info">
-                <p>{props.title}</p>
-                <p>{props.info}</p>
+                <p className="quiz-title">{props.title}</p>
+                <p className="quiz-info">{props.info}</p>
             </div>
             <Button/>
         </div>

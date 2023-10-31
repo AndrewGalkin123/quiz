@@ -63,16 +63,37 @@ main {
 
 .quiz-button { 
   background-color: rgb(134, 138, 140);
-  width: 100px;
-  height: 30px;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  border: rgb(134, 138, 140);
+  float: right;
+  font-size: 16px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
 
+.quiz-button:active { 
+  border: 3px solid rgb(60, 60, 60);
 }
 
 .quiz { 
   width: 90%;
   display: flex;
-  background-color: rgb(202, 202, 202);
+  align-items: center;
+  background-color: rgb(74, 174, 204);
   margin: 20px;
-  height: 70px;
   border-radius: 6px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  color: white;
 }
+
+.quiz-title { 
+  font-size: 35px;
+}
+
+.quiz-info { 
+  font-size: 20px;
+}
+
