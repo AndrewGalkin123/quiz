@@ -1,5 +1,5 @@
 import React from "react"
-import "../../../styles/App.css"
+import "../../styles/App.css"
 import EnterButton from "../enterButton/EnterButton"
 
 const Cover = () => {
