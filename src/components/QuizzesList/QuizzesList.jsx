@@ -3,7 +3,13 @@ import "../../styles/App.css"
 import Quiz from "../Quiz/Quiz"
 
 const QuizzesList = () => {
+
     const quizzes = [
+    { title: "Javascript", info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos obcaecati cupiditate sunt, sapiente animi qui. Corporis sapiente odio doloremque tempore ea soluta sunt voluptatibus alias. Exercitationem voluptatum reprehenderit cum eius." },
+    { title: "C++", info: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos obcaecati cupiditate sunt, sapiente animi qui. Corporis sapiente odio doloremque tempore ea soluta sunt voluptatibus alias. Exercitationem voluptatum reprehenderit cum eius." },
+    { title: "C#", info: "Javascript test" },
+    { title: "Math", info: "Javascript test" },
+    { title: "Javascript", info: "Javascript test" },
     { title: "Javascript", info: "Javascript test" },
     { title: "Javascript", info: "Javascript test" },
     { title: "Javascript", info: "Javascript test" },
