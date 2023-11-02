@@ -1,8 +1,9 @@
 import React from "react";
 
-const Button = () => { 
+const Button = (props) => { 
+    
     return(
-        <button className="quiz-button">Enter the quiz</button>
+        <button onClick={props.function} className="quiz-button">Enter the quiz</button>
     )
 }
 

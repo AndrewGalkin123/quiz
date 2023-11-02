@@ -130,3 +130,13 @@ footer a {
 footer a:hover {
   color: rgb(74, 174, 204);
 }
+
+
+.bg-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Занимает всю ширину страницы */
+  height: 100vh; /* Занимает всю высоту страницы */
+  backdrop-filter: blur(10px); /* Размытие фона (настройте по вашему желанию) */
+}
