@@ -140,3 +140,14 @@ footer a:hover {
   height: 100vh; /* Занимает всю высоту страницы */
   backdrop-filter: blur(10px); /* Размытие фона (настройте по вашему желанию) */
 }
+
+#question-container { 
+  position: absolute;
+  border-radius: 5px;
+  width: 700px;
+  height: 500px;
+  background-color: rgb(136, 37, 106);
+  top: 50%; /* Переместить верхний край контейнера на 50% высоты родительского элемента */
+  left: 50%; /* Переместить левый край контейнера на 50% ширины родительского элемента */
+  transform: translate(-50%, -50%);
+}

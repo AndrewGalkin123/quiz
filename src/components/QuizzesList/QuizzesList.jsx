@@ -1,6 +1,7 @@
 import React from "react"
 import "../../styles/App.css"
 import Quiz from "../Quiz/Quiz"
+import Question from "../Question/Question"
 
 const QuizzesList = () => {
 
@@ -17,7 +18,8 @@ const QuizzesList = () => {
     ]
     return (
         <main>
-            {quizzes.map(el => <Quiz title={el.title} info={el.info} />)}
+            {quizzes.map(el => <Quiz title={el.title} info={el.info} />)}  
+            {/* через пропсы передать обозначитель в Quiz и там обработать */}
         </main>
     )
 }
