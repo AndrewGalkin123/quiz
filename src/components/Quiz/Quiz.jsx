@@ -10,12 +10,28 @@ const Quiz = (props) => {
     const questions = [
         {
             question: "Какой символ используется для комментирования однострочного комментария в JavaScript?",
-            choices: ["//","/*/","--"," ##","''"],
+            choices: ["//", "/*/", "--", " ##", "''"],
             correctAnswer: "//"
-        }, {
-            question: "Сколько планет в солнеч3213ной системе?",
-            choices: ["8", 9, "10"],
-            correctAnswer: 9
+        },
+        {
+            question: "Как объявить константу в JavaScript?",
+            choices: ["var myConst", "let myConst", "const myConst", "const myConst = 5", "const myConst := 10"],
+            correctAnswer: "const myConst"
+        },
+        {
+            question: "Какой оператор используется для проверки строгого равенства в JavaScript?",
+            choices: ["==", "=", "===", "!=", "!=="],
+            correctAnswer: "=="
+        },
+        {
+            question: "Как получить длину строки в JavaScript?",
+            choices: ["string.length()", "string.size()", "string.count()", "string.length", "string.size"],
+            correctAnswer: "string.length"
+        },
+        {
+            question: "Какой метод используется для добавления элемента в начало массива в JavaScript?",
+            choices: ["array.addFirst()", "array.unshift()", "array.prepend()", "array.insertFirst()", "array.push()"],
+            correctAnswer: "array.unshift()"
         }
     ];
     const question = () => {
@@ -34,17 +50,19 @@ const Quiz = (props) => {
             setCurrentQuestion(nextQuestion);
         } else {
             // Все вопросы закончились, выполните действия по завершению викторины
+            setCurrentQuestion(0);
             close();
         }
     }
-    
+
+
     return (
         <div className="quiz">
             <div className="quiz-info-block">
                 <div className="quiz-title-block"><p className="quiz-title">{props.title}</p></div>
                 <p className="quiz-info">{props.info}</p>
             </div>
-            {showBlur && <><Blur /><Question
+            {showBlur && <><Blur close={close} /><Question
                 onCorrectAnswer={setCurrentQuestionFunc}
                 question={questions[currentQuestion].question}
                 answers={questions[currentQuestion].choices}

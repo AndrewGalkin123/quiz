@@ -1,9 +1,9 @@
 import React from "react"
 import "../../styles/App.css"
 
-const Blur = () => {
+const Blur = (props) => {
     return (
-        <div className="bg-blur"></div>
+        <div onClick={props.close} className="bg-blur"></div>
     )
 }
 
