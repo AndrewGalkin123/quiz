@@ -42,6 +42,7 @@ const Quiz = (props) => {
 
     const close = () => {
         document.body.style.overflow = 'auto';
+        setCurrentQuestion(0);
         setShowBlur(false);
     }
     const setCurrentQuestionFunc = () => {
@@ -50,7 +51,7 @@ const Quiz = (props) => {
             setCurrentQuestion(nextQuestion);
         } else {
             // Все вопросы закончились, выполните действия по завершению викторины
-            setCurrentQuestion(0);
+        
             close();
         }
     }
