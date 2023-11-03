@@ -146,8 +146,28 @@ footer a:hover {
   border-radius: 5px;
   width: 700px;
   height: 500px;
-  background-color: rgb(136, 37, 106);
+
   top: 50%; /* Переместить верхний край контейнера на 50% высоты родительского элемента */
   left: 50%; /* Переместить левый край контейнера на 50% ширины родительского элемента */
   transform: translate(-50%, -50%);
+}
+
+#question-text { 
+  background-color: rgb(136, 37, 106);
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+
+#choices-list { 
+  list-style: none;
+}
+
+#result-container { 
+ 
+  height: 100%;
+  width: 100%;
+ 
 }

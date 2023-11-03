@@ -1,7 +1,6 @@
 import React from "react"
 import "../../styles/App.css"
 import Quiz from "../Quiz/Quiz"
-import Question from "../Question/Question"
 
 const QuizzesList = () => {
 
