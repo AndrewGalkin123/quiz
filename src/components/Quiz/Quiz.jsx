@@ -7,6 +7,7 @@ import Question from "../Question/Question.jsx";
 const Quiz = (props) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showBlur, setShowBlur] = useState(false);
+    
     const questions = [
         {
             question: "Какой символ используется для комментирования однострочного комментария?",
@@ -83,7 +84,9 @@ const Quiz = (props) => {
             close();
         }
     }
-
+    const getTopic = () => {
+        //реализовать получение вопросов . Функция должна возвращать массив . Потом присвоить в question,answers,correctAnswer
+    }
 
     return (
         <div className="quiz">

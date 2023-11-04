@@ -3,7 +3,7 @@ import "../../styles/App.css"
 import Quiz from "../Quiz/Quiz"
 
 const QuizzesList = () => {
-    const [topic, setTopic] = useState(null);
+   
     const quizzes = [
     { title: "Javascript", info: "By taking this quiz, you can see how well you understand the basics of JavaScript, as well as learn interesting facts about the programming language that powers web pages. Regardless of your level of knowledge, the quiz will give you the opportunity to improve your JavaScript skills." },
     { title: "C++", info: "By taking this quiz, you can see how well you understand basic C++ concepts, data structures, classes, pointers, and other important elements of the language. Regardless of your level of knowledge, the quiz will provide you with the opportunity to improve your C++ skills and deepen your understanding of the language." },
@@ -15,6 +15,7 @@ const QuizzesList = () => {
     { title: "Ruby", info: "Prepare for an exhilarating adventure in the world of Ruby! In this quiz you will reveal the secrets of one of the most elegant and powerful programming languages. Open the Ruby mystery box to see how well you know the language.You will encounter puzzles where you will need to use your knowledge of Ruby to find the correct answers" },
     { title: "Swift", info: "Welcome to the world of `Swift Mastery`! This quiz is designed to be your key to mastering Swift programming. If you are ready to crack the code, then this game is for you. You will encounter riddles, puzzles and questions that require knowledge and understanding of Swift. Pass them and you will be on your way to becoming a Swift Master." }
     ]
+    
     return (
         <main>
             {quizzes.map(el => <Quiz title={el.title} info={el.info} />)}  
