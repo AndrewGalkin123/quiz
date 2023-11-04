@@ -9,7 +9,7 @@ const Quiz = (props) => {
     const [showBlur, setShowBlur] = useState(false);
     const questions = [
         {
-            question: "Какой символ используется для комментирования однострочного комментария в JavaScript?",
+            question: "Какой символ используется для комментирования однострочного комментария?",
             choices: ["//", "/*/", "--", " ##", "''"],
             correctAnswer: "//"
         },
@@ -34,6 +34,34 @@ const Quiz = (props) => {
             correctAnswer: "array.unshift()"
         }
     ];
+    const swiftQuestions = [
+        {
+            question: "Что такое Swift?",
+            choices: ["Язык программирования", "Игровая консоль", "Фреймворк", "Браузер", "Сетевой протокол"],
+            correctAnswer: "Язык программирования"
+        },
+        {
+            question: "Как объявить переменную в Swift?",
+            choices: ["declare myVar", "let myVar", "var myVar", "myVar = 5", "const myVar"],
+            correctAnswer: "var myVar"
+        },
+        {
+            question: "Как называется оператор для опционального связывания в Swift?",
+            choices: ["if-let", "bind", "unwrap", "optional", "link"],
+            correctAnswer: "if-let"
+        },
+        {
+            question: "Что такое 'интерполяция строк' в Swift?",
+            choices: ["Способ создания пустой строки", "Метод шифрования строк", "Создание строки из чисел", "Вставка значений в строку", "Удаление символов из строки"],
+            correctAnswer: "Вставка значений в строку"
+        },
+        {
+            question: "Какой тип данных используется для хранения целых чисел в Swift?",
+            choices: ["float", "integer", "int", "double", "number"],
+            correctAnswer: "int"
+        }
+    ];
+    
     const question = () => {
         document.body.style.overflow = 'hidden';
         setShowBlur(true);
