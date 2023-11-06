@@ -18,7 +18,7 @@ const QuizzesList = () => {
     
     return (
         <main>
-            {quizzes.map(el => <Quiz title={el.title} info={el.info} />)}  
+            {quizzes.map(el => <Quiz title={el.title} info={el.info} quizzes={quizzes}/>)}  
             {/* через пропсы передать обозначитель в Quiz и там обработать */}
         </main>
     )
