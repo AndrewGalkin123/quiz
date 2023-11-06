@@ -29,7 +29,7 @@ const Question = (props) => {
 
     return (
         <div id="question-container">
-            <div id="question-text">{props.question}</div>
+            <div id="question-block"><p id="question-text">{props.question}</p></div>
             <ul id="choices-list">
                 {props.answers.map(el => <li><button className={`choice ${selectedAnswer === el ? 'selected' : ''}`} onClick={() => handleAnswerClick(el)}>{el}</button></li>)}
             </ul>

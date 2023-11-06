@@ -1,11 +1,11 @@
-import React,{useState} from "react"
+import React from "react"
 import "../../styles/App.css"
 import Quiz from "../Quiz/Quiz"
 
 const QuizzesList = () => {
    
     const quizzes = [
-    { title: "Javascript", info: "By taking this quiz, you can see how well you understand the basics of JavaScript, as well as learn interesting facts about the programming language that powers web pages. Regardless of your level of knowledge, the quiz will give you the opportunity to improve your JavaScript skills." },
+    { title: "JavaScript", info: "By taking this quiz, you can see how well you understand the basics of JavaScript, as well as learn interesting facts about the programming language that powers web pages. Regardless of your level of knowledge, the quiz will give you the opportunity to improve your JavaScript skills." },
     { title: "C++", info: "By taking this quiz, you can see how well you understand basic C++ concepts, data structures, classes, pointers, and other important elements of the language. Regardless of your level of knowledge, the quiz will provide you with the opportunity to improve your C++ skills and deepen your understanding of the language." },
     { title: "Python", info: "This quiz invites you into the world of one of the most popular and convenient programming languages. .By taking this quiz you will learn interesting facts about Python, its syntax, libraries and features. Are you ready for the challenge? Let's start the quiz and see how well you know about the world of Python!" },
     { title: "C#", info: "Welcome to the C# quiz! This quiz takes you into the exciting world of C#, a programming language created by Microsoft. C# is widely used in desktop application development, web development and gaming industry. Are you ready for the challenge? Let's start the quiz and see how well you know C#!" },
