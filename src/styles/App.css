@@ -147,7 +147,7 @@ footer a:hover {
   position: fixed;
   border-radius: 5px;
   width: 700px;
-  height: 500px;
+  height: 450px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -179,6 +179,7 @@ footer a:hover {
 
 #choices-list {
   list-style: none;
+  margin-top: 15px;
 }
 
 .choice {
@@ -205,4 +206,16 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Ваш стиль для правильного ответа (зеленый) */
+.selected.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Ваш стиль для неправильного ответа (красный) */
+.selected.incorrect {
+  background-color: #f44336;
+  color: white;
 }

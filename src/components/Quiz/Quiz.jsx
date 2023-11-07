@@ -4,6 +4,7 @@ import Blur from "../Blur/Blur.jsx"
 import "../../styles/App.css"
 import Question from "../Question/Question.jsx";
 import questionSets from "./questions";
+
 const Quiz = (props) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [showBlur, setShowBlur] = useState(false);
