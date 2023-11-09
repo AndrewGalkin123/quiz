@@ -155,11 +155,6 @@ footer a:hover {
   margin: 0 auto;
 }
 
-/* Add these styles to your existing CSS file or use a new one */
-
-
-
-
 #question-block {
   background-color: rgb(136, 37, 106);
   height: 120px;
@@ -178,20 +173,15 @@ footer a:hover {
   font-size: 30px;
 }
 
-.choice-container {
-  display: flex;
-  align-items: center;
-}
 
 .choice {
   position: relative;
   width: 100px;
   height: 100px;
   margin: 10px;
-  background-color: rgb(136, 37, 106);
   border: 0px;
   font-size: 20px;
-  overflow: hidden;
+  background-color: none;
 }
 
 .choice::before {
@@ -203,7 +193,7 @@ footer a:hover {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #3498db;
 }
 
 .triangle::before {
@@ -215,7 +205,7 @@ footer a:hover {
   width: 70px;
   height: 70px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background-color: white;
+  background-color: #e74c3c;
 }
 
 .square::before {
@@ -226,7 +216,7 @@ footer a:hover {
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background-color: white;
+  background-color: #2ecc71;
 }
 
 .rhombus::before {
@@ -238,7 +228,7 @@ footer a:hover {
   width: 70px;
   height: 70px;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  background-color: white;
+  background-color: #f39c12;
 }
 
 .star::before {
@@ -250,7 +240,7 @@ footer a:hover {
   width: 70px;
   height: 70px;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  background-color: white;
+  background-color: #9b59b6;
 }
 
 
@@ -260,21 +250,15 @@ footer a:hover {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.choice:active {
-  border: 2px solid white;
-}
-
 /* Ваш стиль для правильного ответа (зеленый) */
-.selected.correct {
+.choice.correct::before {
   background-color: #4CAF50;
-  color: white;
 }
 
-/* Ваш стиль для неправильного ответа (красный) */
-.selected.incorrect {
+.choice.incorrect::before {
   background-color: #f44336;
-  color: white;
 }
+
 
 #main-logo {
   width: 500px;
