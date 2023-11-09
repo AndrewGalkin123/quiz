@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import Button from "../common/button/Button";
-import Blur from "../Blur/Blur.jsx"
-import "../../styles/App.css"
+import "../../styles/App.css";
 import Question from "../Question/Question.jsx";
 import questionSets from "./questions";
+import Header from "../common/Header/Header.jsx";
 
 const Quiz = (props) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [showBlur, setShowBlur] = useState(false);
+    const [isQuestionVisible, setIsQuestionVisible] = useState(false);
+
     const questionArray = questionSets[props.title];
 
-    const question = () => {
+    const openQuestion = () => {
         document.body.style.overflow = 'hidden';
-        setShowBlur(true);
+        setIsQuestionVisible(true);
     }
 
-    const close = () => {
+    const closeQuestion = () => {
         document.body.style.overflow = 'auto';
+        setIsQuestionVisible(false);
         setCurrentQuestion(0);
-        setShowBlur(false);
     }
 
     const setCurrentQuestionFunc = () => {
@@ -27,28 +28,34 @@ const Quiz = (props) => {
             setCurrentQuestion(nextQuestion);
         } else {
             // All questions have been answered, perform quiz completion actions
-            close();
+            closeQuestion();
         }
     }
 
     return (
         <div className="quiz">
-            <div className="quiz-info-block">
-                <div className="quiz-title-block"><p className="quiz-title">{props.title}</p></div>
-                <p className="quiz-info">{props.info}</p>
-            </div>
-            {showBlur && (
-                <>
-                    <Blur close={close} />
+
+            {!isQuestionVisible && (
+                <><div className="quiz-info-block">
+                    <div className="quiz-title-block"><p className="quiz-title">{props.title}</p></div>
+                    <p className="quiz-info">{props.info}</p>
+
+                </div>
+                    <Button function={openQuestion} />
+                </>
+            )}
+
+            {isQuestionVisible && (
+                <div className="question-overlay">
+                    <Header /> {/* Include Header in the Question overlay */}
                     <Question
                         onCorrectAnswer={setCurrentQuestionFunc}
                         question={questionArray[currentQuestion].question}
                         answers={questionArray[currentQuestion].choices}
                         correctAnswer={questionArray[currentQuestion].correctAnswer}
                     />
-                </>
+                </div>
             )}
-            <Button function={question} />
         </div>
     );
 }

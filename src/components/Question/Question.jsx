@@ -3,16 +3,16 @@ import "../../styles/App.css"
 
 const Question = (props) => {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
-   
+
 
     const handleAnswerClick = (answer) => {
         setSelectedAnswer(answer);
         const correctAnswer = props.correctAnswer;
-        if (answer === correctAnswer) {     
+        if (answer === correctAnswer) {
             setTimeout(() => {
                 props.onCorrectAnswer(); // Вызываем функцию из родительского компонента
             }, 1000);
-        } 
+        }
     };
 
     const getAnswerClass = (answer) => {
@@ -21,8 +21,9 @@ const Question = (props) => {
         }
         return '';
     };
-
+    const shapes = ['circle', 'triangle', 'square', 'rhombus', 'star'];
     return (
+
         <div id="question-container">
             <div id="question-block">
                 <p id="question-text">{props.question}</p>
@@ -30,16 +31,19 @@ const Question = (props) => {
             <ul id="choices-list">
                 {props.answers.map((el) => (
                     <li key={el}>
-                        <button
-                            className={`choice ${getAnswerClass(el)}`}
-                            onClick={() => handleAnswerClick(el)}
-                        >
-                            {el}
-                        </button>
+                        <div className="choice-container">
+                            <button
+                                className={`choice ${shapes[el]} ${getAnswerClass(el)}`}
+                                onClick={() => handleAnswerClick(el)}
+                            ></button>
+                            <span className="choice-text">{el}</span>
+                        </div>
                     </li>
                 ))}
             </ul>
+
         </div>
+
     );
 };
 
