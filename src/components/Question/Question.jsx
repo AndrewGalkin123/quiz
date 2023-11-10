@@ -18,10 +18,20 @@ const Question = (props) => {
 
     const getAnswerClass = (answer) => {
         if (selectedAnswer === answer) {
-            return answer === props.correctAnswer ? 'selected correct' : 'selected incorrect';
+            if (answer === props.correctAnswer) {
+                return 'correct';
+            } else {
+                return 'incorrect';
+            }
         }
         return '';
     };
+
+    const currentQuestion = props.currentQuestion;
+    const goToPrevQuestion = props.goToPrevQuestion;
+    const goToNextQuestion = props.goToNextQuestion;
+    const questionArray = props.questionArray;
+
     const shapes = ['circle', 'triangle', 'square', 'rhombus', 'star'];
 
     return (
@@ -32,16 +42,23 @@ const Question = (props) => {
             <ul id="choices-list">
                 {props.answers.map((el, index) => (
                     <li key={index}>
-                        <div className="choice-container">
+                        <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
                             <button
                                 className={`choice ${shapes[index]} ${getAnswerClass(el)}`}
-                                onClick={() => handleAnswerClick(el)}
                             ></button>
                             <span className="choice-text">{el}</span>
                         </div>
                     </li>
                 ))}
             </ul>
+            <div className="question-navigation">
+                {currentQuestion > 0 && (
+                    <button className="prev" onClick={goToPrevQuestion}>Prev</button>
+                )}
+                {currentQuestion < questionArray.length - 1 && (
+                    <button className="next" onClick={goToNextQuestion}>Next</button>
+                )}
+            </div>
         </div>
     );
 

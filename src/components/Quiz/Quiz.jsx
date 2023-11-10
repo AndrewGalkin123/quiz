@@ -5,6 +5,7 @@ import Question from "../Question/Question.jsx";
 import questionSets from "./questions";
 import Header from "../common/Header/Header.jsx";
 
+
 const Quiz = (props) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isQuestionVisible, setIsQuestionVisible] = useState(false);
@@ -31,6 +32,18 @@ const Quiz = (props) => {
             closeQuestion();
         }
     }
+    const goToPrevQuestion = () => {
+        if (currentQuestion > 0) {
+            setCurrentQuestion(currentQuestion - 1);
+        }
+    };
+
+    const goToNextQuestion = () => {
+        if (currentQuestion < questionArray.length - 1) {
+            setCurrentQuestion(currentQuestion + 1);
+        }
+    };
+
 
     return (
         <div className="quiz">
@@ -47,17 +60,24 @@ const Quiz = (props) => {
 
             {isQuestionVisible && (
                 <div className="question-overlay">
-                    <Header /> {/* Include Header in the Question overlay */}
+                    <Header />
                     <Question
                         onCorrectAnswer={setCurrentQuestionFunc}
                         question={questionArray[currentQuestion].question}
                         answers={questionArray[currentQuestion].choices}
                         correctAnswer={questionArray[currentQuestion].correctAnswer}
+                        currentQuestion={currentQuestion}
+                        goToPrevQuestion={goToPrevQuestion}
+                        goToNextQuestion={goToNextQuestion}
+                        questionArray={questionArray}
                     />
                 </div>
             )}
+
         </div>
     );
 }
 
 export default Quiz;
+
+

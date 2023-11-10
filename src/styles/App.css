@@ -150,9 +150,11 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+ /* Выравниваем по центру вертикально */
   width: 85%;
   height: 90%;
   margin: 0 auto;
+  position: relative; /* Добавляем позицию relative */
 }
 
 #question-block {
@@ -181,7 +183,8 @@ footer a:hover {
   margin: 10px;
   border: 0px;
   font-size: 20px;
-  background-color: none;
+  background-color: rgb(136, 37, 106);
+
 }
 
 .choice::before {
@@ -190,8 +193,8 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: #3498db;
 }
@@ -202,10 +205,10 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background-color: #e74c3c;
+  background-color: rgb(225, 231, 60);
 }
 
 .square::before {
@@ -214,8 +217,8 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   background-color: #2ecc71;
 }
 
@@ -225,8 +228,8 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
   background-color: #f39c12;
 }
@@ -237,10 +240,10 @@ footer a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  background-color: #9b59b6;
+  background-color: rgb(104, 106, 133);
 }
 
 
@@ -248,17 +251,57 @@ footer a:hover {
 .choice-text {
   margin-left: 10px; /* Adjust the margin as needed */
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
 }
 
 /* Ваш стиль для правильного ответа (зеленый) */
-.choice.correct::before {
+
+
+.choice-container { 
+  background-color: rgb(136, 37, 106);
+  margin-bottom: 10px;
+  width: 30%;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.correct {
   background-color: #4CAF50;
 }
 
-.choice.incorrect::before {
+.incorrect {
   background-color: #f44336;
 }
 
+.question-navigation {
+ 
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+
+/* Стиль для кнопок "Prev" и "Next" */
+.question-navigation button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Стиль для кнопки "Next" */
+.question-navigation button.next {
+  background-color: #2ecc71;
+}
+
+/* Стиль для кнопки "Prev" */
+.question-navigation button.prev {
+  background-color: #f39c12;
+}
 
 #main-logo {
   width: 500px;
