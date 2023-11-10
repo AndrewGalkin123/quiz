@@ -39,25 +39,27 @@ const Question = (props) => {
             <div id="question-block">
                 <p id="question-text">{props.question}</p>
             </div>
-            <ul id="choices-list">
-                {props.answers.map((el, index) => (
-                    <li key={index}>
-                        <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
-                            <button
-                                className={`choice ${shapes[index]} ${getAnswerClass(el)}`}
-                            ></button>
-                            <span className="choice-text">{el}</span>
-                        </div>
-                    </li>
-                ))}
-            </ul>
-            <div className="question-navigation">
-                {currentQuestion > 0 && (
-                    <button className="prev" onClick={goToPrevQuestion}>Prev</button>
-                )}
-                {currentQuestion < questionArray.length - 1 && (
-                    <button className="next" onClick={goToNextQuestion}>Next</button>
-                )}
+            <div >
+                <ul id="choices-list">
+                    {props.answers.map((el, index) => (
+                        <li key={index}>
+                            <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
+                                <button
+                                    className={`choice ${shapes[index]} ${getAnswerClass(el)}`}
+                                ></button>
+                                <span className="choice-text">{el}</span>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+                <div className="question-navigation">
+                    {currentQuestion > 0 && (
+                        <button className="prev" onClick={goToPrevQuestion}>Prev</button>
+                    )}
+                    {currentQuestion < questionArray.length - 1 && (
+                        <button className="next" onClick={goToNextQuestion}>Next</button>
+                    )}
+                </div>
             </div>
         </div>
     );
