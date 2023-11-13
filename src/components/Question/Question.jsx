@@ -27,27 +27,27 @@ const Question = (props) => {
 
     const currentQuestion = props.currentQuestion;
     const questionArray = props.questionArray;
-    const shapes = ['circle', 'triangle', 'square', 'rhombus', 'star'];
+
 
     return (
         <div id="question-container">
             <div id="question-block">
                 <p id="question-text">{props.question}</p>
             </div>
-            <div className="question-content">
-                <div className="choices-list">
-                    <ul>
-                        {props.answers.map((el, index) => (
-                            <li key={index}>
-                                <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
-                                    <button className={`choice ${getAnswerClass(el)}`}></button>
-                                    <span className="choice-text">{el}</span>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between"}}>
+
+            <div className="choices-list">
+                <ul>
+                    {props.answers.map((el, index) => (
+                        <li key={index}>
+                            <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
+                                <div className={`choice`}></div>
+                                <span className="choice-text">{el}</span>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            {/* <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between"}}>
                     <div className="question-header">
                         <p> {currentQuestion + 1}/{questionArray.length}</p>
                     </div>
@@ -59,8 +59,8 @@ const Question = (props) => {
                             <button className="next" onClick={props.goToNextQuestion}>&#8594;</button>
                         )}
                     </div>
-                </div>
-            </div>
+                </div> */}
+
 
         </div>
     );

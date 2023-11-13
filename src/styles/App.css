@@ -89,7 +89,6 @@ main {
   width: 300px;
   height: 300px;
   display: flex;
-
   background-color: rgb(74, 174, 204);
   margin: 20px;
   border-radius: 6px;
@@ -145,10 +144,8 @@ footer a:hover {
   width: 100%;
   height: 100%;
   background-color: rgb(181, 81, 151);
-  /* Adjust the opacity as needed */
   justify-content: center;
   align-items: center;
-  z-index: 999;
 }
 
 #question-container {
@@ -174,76 +171,10 @@ footer a:hover {
 }
 
 
-
-.choice {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  margin: 10px;
-  border: 0px;
-  font-size: 20px;
+.choice-container {
   background-color: rgb(136, 37, 106);
+  
 }
-
-/* .choice::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #3498db;
-} */
-
-.triangle::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 100px;
-  height: 100px;
-  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  background-color: rgb(225, 231, 60);
-}
-
-.square::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  background-color: #2ecc71;
-}
-
-.rhombus::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 100px;
-  height: 100px;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  background-color: #f39c12;
-}
-
-.star::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  background-color: rgb(104, 106, 133);
-}
-
 
 
 .choice-text {
@@ -253,18 +184,11 @@ footer a:hover {
   font-size: 28px;
 }
 
-/* Ваш стиль для правильного ответа (зеленый) */
-
-
-.choice-container { 
-  background-color: rgb(136, 37, 106);
-  margin: 10px 0px;
-  width: 30%;
-  display: flex;
-  border-radius: 5px;
-  align-items: center;
+.choices-list { 
   
+  width: 100%;
 }
+
 
 .correct {
   background-color: #4CAF50;
@@ -283,10 +207,10 @@ footer a:hover {
 
 .question-navigation button.prev,
 .question-navigation button.next {
-    font-size: 40px; /* Adjust the font size as needed */
+    font-size: 60px; /* Adjust the font size as needed */
 }
 
-/* Стиль для кнопок "Prev" и "Next" */
+
 .question-navigation button {
   color: white;
   border: none;
@@ -311,15 +235,11 @@ footer a:hover {
 
 .question-content {
   display: flex;
+ 
 }
 
 .question-header { 
   font-size: 36px;
-}
-
-.choices-list {
-  flex: 1; 
- 
 }
 
 
