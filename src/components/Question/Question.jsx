@@ -34,19 +34,17 @@ const Question = (props) => {
             <div id="question-block">
                 <p id="question-text">{props.question}</p>
             </div>
+            <ul>
+                {props.answers.map((el, index) => (
+                    <li key={index}>
+                        <div className={getAnswerClass(el)} onClick={() => handleAnswerClick(el)}>
+                            <div className="choice"></div>
+                            <span className="choice-text">{el}</span>
+                        </div>
+                    </li>
+                ))}
+            </ul>
 
-            <div className="choices-list">
-                <ul>
-                    {props.answers.map((el, index) => (
-                        <li key={index}>
-                            <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
-                                <div className={`choice`}></div>
-                                <span className="choice-text">{el}</span>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
             {/* <div style={{display: "flex", flexDirection: "column", alignItems: "flex-end", justifyContent: "space-between"}}>
                     <div className="question-header">
                         <p> {currentQuestion + 1}/{questionArray.length}</p>
