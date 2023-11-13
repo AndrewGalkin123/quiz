@@ -40,7 +40,7 @@ const Question = (props) => {
                         {props.answers.map((el, index) => (
                             <li key={index}>
                                 <div onClick={() => handleAnswerClick(el)} className={`choice-container ${getAnswerClass(el)}`}>
-                                    <button className={`choice ${shapes[index]} ${getAnswerClass(el)}`}></button>
+                                    <button className={`choice ${getAnswerClass(el)}`}></button>
                                     <span className="choice-text">{el}</span>
                                 </div>
                             </li>
